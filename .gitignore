@@ -1,0 +1,28 @@
+# Go
+/bin/
+/tmp/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+coverage.out
+coverage.html
+vendor/
+go.work
+go.work.sum
+__debug_bin*
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# IDE
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

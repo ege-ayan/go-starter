@@ -1,0 +1,37 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "run server",
+      "type": "shell",
+      "command": "go run ./cmd/server",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "ENV": "development",
+          "PORT": "8080"
+        }
+      }
+    },
+    {
+      "label": "test all",
+      "type": "shell",
+      "command": "go test ./... -race -count=1",
+      "group": "test",
+      "presentation": {
+        "reveal": "always"
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    }
+  ]
+}

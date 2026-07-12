@@ -1,0 +1,29 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Server",
+      "type": "go",
+      "request": "launch",
+      "mode": "auto",
+      "program": "${workspaceFolder}/cmd/server",
+      "console": "integratedTerminal",
+      "env": {
+        "APP_NAME": "go-starter",
+        "APP_VERSION": "dev",
+        "ENV": "development",
+        "PORT": "8080",
+        "LOG_LEVEL": "info",
+        "DATABASE_URL": "postgres://postgres:postgres@localhost:5432/go_starter?sslmode=disable"
+      }
+    },
+    {
+      "name": "Debug Tests (handler)",
+      "type": "go",
+      "request": "launch",
+      "mode": "test",
+      "program": "${workspaceFolder}/internal/handler",
+      "args": ["-test.v"]
+    }
+  ]
+}
